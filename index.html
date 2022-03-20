@@ -30,6 +30,7 @@
           <ul class="header-list">
             <li class="header-item">
               <a class="link current" href="./index.html">Студия</a>
+              <div class="nav-curent"></div>
             </li>
             <li class="header-item">
               <a class="link" href="./portfolio.html">Портфолио</a>
@@ -61,7 +62,9 @@
     <main>
       <section class="title main-image">
         <h1 class="caption">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="btn">Заказать услугу</button>
+        <button data-modal-open type="button" class="btn">
+          Заказать услугу
+        </button>
       </section>
 
       <section class="main">
@@ -123,29 +126,44 @@
           <h2 class="desc">Чем мы занимаемся</h2>
           <ul class="icon">
             <li class="page-skill">
-              <img
-                class="images"
-                src="./images/box1.jpg "
-                width="370"
-                height="294"
-                alt="Пример1"
-              />
+              <div class="context-box">
+                <img
+                  class="images"
+                  src="./images/box1.jpg "
+                  width="370"
+                  height="294"
+                  alt="Пример1"
+                />
+                <div class="context-txt">
+                  <h2 class="join">Десктопные приложения</h2>
+                </div>
+              </div>
             </li>
             <li class="page-skill">
-              <img
-                src="./images/box2.jpg"
-                width="370"
-                height="294"
-                alt="пример2"
-              />
+              <div class="context-box">
+                <img
+                  src="./images/box2.jpg"
+                  width="370"
+                  height="294"
+                  alt="пример2"
+                />
+                <div class="context-txt">
+                  <h2 class="join">Мобильные приложения</h2>
+                </div>
+              </div>
             </li>
             <li class="page-skill">
-              <img
-                src="./images/box3.jpg"
-                width="370"
-                height="294"
-                alt="пример3"
-              />
+              <div class="context-box">
+                <img
+                  src="./images/box3.jpg"
+                  width="370"
+                  height="294"
+                  alt="пример3"
+                />
+                <div class="context-txt">
+                  <h2 class="join">Дизайнерские решения</h2>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -424,6 +442,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close type="button" class="exit-btn">
+          <img src="images/exit.svg" width="11px" height="11px"
+        </button>
+      </div>
+    </div>
+    <script src="/modal.js"></script>
   </body>
   <!--  -->
 </html>
