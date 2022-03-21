@@ -135,6 +135,9 @@ a {
   margin-top: 30px;
   width: 200px;
   height: 50px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover {
   background: #1c84d8;
@@ -226,7 +229,11 @@ a {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .link:focus {
   color: red;
 }
@@ -236,18 +243,19 @@ a {
 link:active {
   background-color: #2196f3;
 }
-.link.current {
-  position: relative;
-  background-color: #1c84d8;
-  content: '';
-  color: var(--color-blue);
-}
-.nav-curent {
+.link.current::before {
   position: absolute;
+  bottom: -4%;
   content: '';
-  width: 40px;
-  height: 20px;
+
+  display: inline-block;
+  background-color: #1c84d8;
+  color: var(--color-blue);
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
 }
+
 .contact-info {
   display: inline-flex;
   font-weight: 500;
@@ -259,6 +267,9 @@ link:active {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .corection {
   margin-left: 50px;
@@ -399,6 +410,7 @@ link:active {
   align-items: center;
 }
 .header-item {
+  position: relative;
   margin-right: 50px;
 }
 .header-item:last-child {
@@ -491,6 +503,9 @@ link:active {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-box {
@@ -568,6 +583,9 @@ link:active {
   opacity: 1;
 }
 .portfolion-cart {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
 }
 .portfolion-cart:hover,
@@ -597,8 +615,10 @@ link:active {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
   fill: #afb1b8;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-icons:focus,
 .link-icons:hover {
@@ -654,6 +674,9 @@ link:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-size:last-child {
   margin-right: 0px;
@@ -669,12 +692,13 @@ link:active {
   display: flex;
   width: 100%;
   height: 100%;
-
   justify-content: center;
   align-items: center;
-
   color: currentColor;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-size:focus {
