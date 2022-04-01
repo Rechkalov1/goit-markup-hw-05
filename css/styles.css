@@ -11,6 +11,7 @@ font-family: 'Roboto', sans-serif;
   --second-color: #212121;
   --color-blue: #2196f3;
   --color-white: #ffffff;
+  --transition-timing-func: cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-item: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -135,7 +136,9 @@ a {
   margin-top: 30px;
   width: 200px;
   height: 50px;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transition-timing-func),
+    box-shadow 250ms var(--transition-timing-func);
+
   cursor: pointer;
 }
 .btn:hover {
@@ -178,7 +181,10 @@ a {
   cursor: pointer;
   padding: 6px 22px;
   border: 1px solid #eeeeee;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transition-timing-func),
+    box-shadow 250ms var(--transition-timing-func),
+    color 250ms var(--transition-timing-func),
+    border 250ms var(--transition-timing-func);
 }
 .services-txt.current {
   background-color: var(--color-blue);
@@ -240,7 +246,7 @@ a {
   color: var(--color-blue);
 }
 link:active {
-  background-color: #2196f3;
+  color: #2196f3;
 }
 .link.current::before {
   position: absolute;
@@ -254,7 +260,9 @@ link:active {
   width: 100%;
   height: 4px;
 }
-
+.link.current {
+  color: var(--color-blue);
+}
 .contact-info {
   display: inline-flex;
   font-weight: 500;
@@ -262,7 +270,6 @@ link:active {
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: var(--main-color);
-  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
@@ -293,13 +300,13 @@ link:active {
   color: var(--color-white);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--transition-timing-func);
 }
 .owerlay-thumb {
   position: relative;
   overflow: hidden;
 }
-.owerlay-thumb:hover .owerlay-txt {
+.portfolion-cart:hover .owerlay-txt {
   transform: translateY(0%);
 }
 .location {
@@ -527,7 +534,7 @@ link:active {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transition-timing-func);
 }
 
 .footer-box {
@@ -589,19 +596,15 @@ link:active {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
-}
-.portfolio-foto {
-  position: relative;
+  transition: box-shadow 250ms var(--transition-timing-func);
 }
 
 .portfolion-cart {
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
+  transition: box-shadow 250ms var(--transition-timing-func);
 }
-.portfolion-cart:hover,
-.portfolion-cart:focus {
+.porfolion-item:hover,
+.porfolion-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -628,7 +631,8 @@ link:active {
   height: 44px;
   border-radius: 50%;
   fill: #afb1b8;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--transition-timing-func),
+    color 250ms var(--transition-timing-func);
 }
 .link-icons:focus,
 .link-icons:hover {
@@ -684,7 +688,6 @@ link:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-size:last-child {
   margin-right: 0px;
@@ -694,6 +697,7 @@ link:active {
   width: 106px;
   height: 60px;
   color: currentColor;
+  transition: fill 250ms var(--transition-timing-func);
 }
 
 .company-format {
@@ -704,6 +708,7 @@ link:active {
   align-items: center;
   color: currentColor;
   cursor: pointer;
+  transition: border-color 250ms var(--transition-timing-func);
 }
 
 .company-size:focus {
@@ -759,4 +764,7 @@ link:active {
   box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
+  background-image: url(../images/close-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
