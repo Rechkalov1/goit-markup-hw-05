@@ -294,9 +294,10 @@ link:active {
   justify-content: center;
   font-family: var(--font-style);
   font-weight: var(--font-weight);
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.55;
   letter-spacing: 0.03em;
+  padding: 63px 24px;
   color: var(--color-white);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
@@ -631,8 +632,9 @@ link:active {
   border-radius: 50%;
   fill: #afb1b8;
   transition: background-color 250ms var(--transition-timing-func),
-    color 250ms var(--transition-timing-func);
+    fill 250ms var(--transition-timing-func);
 }
+
 .link-icons:focus,
 .link-icons:hover {
   background-color: var(--color-blue);
@@ -687,6 +689,7 @@ link:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-color 250ms var(--transition-timing-func);
 }
 .company-size:last-child {
   margin-right: 0px;
@@ -696,8 +699,7 @@ link:active {
   width: 106px;
   height: 60px;
   color: currentColor;
-  transition: fill 250ms var(--transition-timing-func),
-    border-color 250ms var(--transition-timing-func);
+  transition: fill 250ms var(--transition-timing-func);
 }
 
 .company-format {
@@ -708,8 +710,7 @@ link:active {
   align-items: center;
   color: currentColor;
   cursor: pointer;
-  transition: fill 250ms var(--transition-timing-func),
-    border-color 250ms var(--transition-timing-func);
+  transition: border-color 250ms var(--transition-timing-func);
 }
 
 .company-size:focus {
